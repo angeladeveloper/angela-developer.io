@@ -1,0 +1,55 @@
+
+canvas {
+  position:fixed;
+  z-index:-1;
+}
+
+:root {
+  --outer-space: #33393f;
+  --bright-turquoise: #4c0969;
+  --gin: #e0eae4;
+  --heliotrope: #33393f;
+}
+
+
+
+.back{
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: 100% 100%;
+}
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px 2em;
+}
+.box:first-child{
+  align-self: auto;
+}
+
+
+
+
+.code-card {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80%;
+  color: var(--heliotrope);
+  outline: 2px solid var(--heliotrope);
+  outline-color: #33393f;
+  outline-offset: -2px;
+}
+
+
+.card-text {
+  outline-color: none;
+  padding: 1%;
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  position:relative ;
+  color: #b6d8f0;
+  color: var(--gin);
+  text-align: center;
+}
