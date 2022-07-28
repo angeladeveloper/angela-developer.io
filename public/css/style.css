@@ -1,70 +1,90 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid rgb(204, 204, 204);
+/* Import Bulma */
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+:root{
+  --main-clr: #0bba97;
 }
-body {
-  background-color:	rgb(196, 238, 254);
-  text-decoration: none;
-  background-image:url('../assets/m.jpg');
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-size: 100% 100%;
+
+svg {
+  width: 65px;
+  height: 55px;
 }
-a {
-  text-decoration: none;
-}
-.no-button {
-  background: none;
-  border: none;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
   padding: 0;
-  cursor: pointer;
-  color: #4ea2ca;
-  text-decoration: none;
-  font-size: 100%;
-}
-.header {
-  font-weight: bold;
-  text-decoration: none;
-}
-.no-button:hover {
-  color: #065b83;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.dollar-amount {
-  color: #0e9d0e;
-  font-weight: bold;
-  margin-left: -5px;
+
+body{
+
+  min-height: 100vh;
+  background: var(--main-clr);
 }
-.commets {
-  text-align: left;
-  color:#13313f;
-  font-weight: bold;
+.hero{
+  color: #fff;
 }
-.mark {
-  font-size: small;
-  text-align: center;
+
+.hero .subtitle{
+
+  color:white
 }
-.card {
-  opacity: 85%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 110%;
-  font-weight: bold;
-  color: rgb(0, 63, 54);
-  border: none;
+
+.lightbulb{
+  color:yellow
+}
+.wrapper{
   display: flex;
-  flex-direction: column;
-  background-color:	rgb(240, 246, 252);
-  border-radius: 8px;
-  box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-    rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
-  margin: 60px auto;
-  padding: 2%;
-  width: 70vw;
-  margin-bottom: 5%;
 }
-
-
-a :hover{
-  transform:scale(1.0);
-  text-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-  rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+.wrapper .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #232a5b;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 130%;
+  width: 100%;
+  background: var(--main-clr);
+  border-left: 2px solid #232a5b;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
 }
