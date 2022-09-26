@@ -2,10 +2,10 @@
   "name": "angela-developer.io",
   "version": "1.0.0",
   "description": "Portfolio of Angela Wright",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node index.js",
     "seed": "node seeds/seed.js"
   },
   "keywords": [],
@@ -33,6 +33,5 @@
   },
   "bugs": {
     "url": "https://github.com/angeladeveloper/angela-developer.io/issues"
-  },
-  "homepage": "https://github.com/angeladeveloper/angela-developer.io#readme"
+  }
 }
